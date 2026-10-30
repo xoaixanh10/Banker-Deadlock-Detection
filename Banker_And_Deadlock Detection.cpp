@@ -66,15 +66,15 @@ vector<pair<int, int>> buildWaitForEdges(const State& s) {
     return {};
 }
 
+// Mo phong ket thuc mot tien trinh va tra lai Available cac tai nguyen tien trinh do dang giu.
+void recoverTerminate(State& s, int processId) {
+}
+
 // ==================== THANH VIEN 4: Pham La Trung Nam (GUI) ====================
 
 // ========================================
 
 // ==================== THANH VIEN 5: Cao Le Minh Đang (CSV + TEST) ====================
-// Mo phong ket thuc mot tien trinh va tra lai Available cac tai nguyen tien trinh do dang giu.
-void recoverTerminate(State& s, int processId) {
-}
-
 // Ham khoi dong giao dien desktop; thanh vien phu trach GUI se trien khai than ham.
 void runApp();
 
