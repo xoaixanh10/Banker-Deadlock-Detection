@@ -68,8 +68,8 @@ bool bankerRequestAccepted(const State& s, string& explanation) {
     vector<vector<int>> Need = calculateNeed(s);
 
     for (int j = 0; j < m; j++) {
-        if (s.Request[j] > Need[p][j]) { explanation = "Lỗi: Vượt quá Need"; return false; }
-        if (s.Request[j] > s.Available[j]) { explanation = "Đợi: Không đủ Available"; return false; }
+        if (s.Request[j] > Need[p][j]) { explanation = "Loi: Vuot qua Need"; return false; }
+        if (s.Request[j] > s.Available[j]) { explanation = "Doi: Khong du Available"; return false; }
     }
 
     State s_copy = s;
@@ -79,11 +79,11 @@ bool bankerRequestAccepted(const State& s, string& explanation) {
     }
 
     if (bankerSafety(s_copy).isSafe) {
-        explanation = "Chấp nhận: Hệ thống an toàn";
+        explanation = "Chap nhan: He thong an toan";
         return true;
     } 
     
-    explanation = "Từ chối: Gây mất an toàn (Deadlock)";
+    explanation = "Tu choi: He thong khong an toan (Deadlock)";
     return false;
 }
 
